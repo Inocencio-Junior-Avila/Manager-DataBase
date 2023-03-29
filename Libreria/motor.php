@@ -1,28 +1,30 @@
 <?php
 /* 2021-0836 Inocencio Junior Avila Gonzalez */
-function asg_filaa(){
+function asg_filaa()
+{
     $final = "<div class='row' style='margin-top:10px;'>";
 
     $n = 12 / func_num_args();
-    foreach(func_get_args() as $arg){
-        $final .="<div class='col-md-{$n}'>$arg</div>";
+    foreach (func_get_args() as $arg) {
+        $final .= "<div class='col-md-{$n}'>$arg</div>";
     }
-    $final .="</div>";
+    $final .= "</div>";
 
     return $final;
 }
 
-function asg_input($id, $label, $obj, $opts=[]){
+function asg_input($id, $label, $obj, $opts = [])
+{
 
-    $type ='text';
-    $class= 'form-control';
+    $type = 'text';
+    $class = 'form-control';
     $placeholder = '';
     $value = '';
     $required = 'required';
 
     extract($opts);
 
-    if (isset($obj->$id)){
+    if (isset($obj->$id)) {
         $value = $obj->$id;
     }
 
@@ -34,9 +36,10 @@ function asg_input($id, $label, $obj, $opts=[]){
     return $rs;
 }
 
-function mostrar_tabla($rs = []){
+function mostrar_tabla($rs = [])
+{
 
-    if(count($rs) == 0){
+    if (count($rs) == 0) {
         return "<h3>No hay ningun registro</h3>";
     }
 
@@ -44,16 +47,16 @@ function mostrar_tabla($rs = []){
         <thead>
             <tr>";
 
-    $fila = $rs [0];
-    foreach($fila as $key => $values){
+    $fila = $rs[0];
+    foreach ($fila as $key => $values) {
         $final .= "<th>{$key}</th>";
     }
     $final .= "</tr><tbody>";
-    
-    foreach($rs as $fila){
+
+    foreach ($rs as $fila) {
         $final .= "<tr>";
-        foreach($fila as $key => $value){
-            $final .="<td>{$key}</td>";
+        foreach ($fila as $key => $value) {
+            $final .= "<td>{$key}</td>";
         }
         $final .= "</tr>";
     }
