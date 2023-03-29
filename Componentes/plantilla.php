@@ -37,7 +37,7 @@ class plantilla{
 
 </head>
 <body>
-        <nav class="red darken-4">
+        <nav class="red darken-3">
         <div class= "container">
             <div class="nav-wrapper">
                 <a href="./" class="brand-logo center"><img src="img/logoT3.png" alt="logo :)" width="150px" height="75px"></a>
