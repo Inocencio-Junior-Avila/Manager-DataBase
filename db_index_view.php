@@ -1,10 +1,10 @@
 <?php
-include('cargar.php');
+/* 2021-0836 Inocencio Junior Avila Gonzalez */
+include 'cargar.php';
 $tabla = $_GET['tabla'];
 $db = $_GET['db'];
 
-
-plantilla::aplicar($db.'Tabla '.$tabla);
+plantilla::aplicar($db . 'Tabla ' . $tabla);
 
 $con = conexion::get_con();
 mysqli_select_db($con, $db);
@@ -13,10 +13,8 @@ $rs = mysqli_query($con, $sql);
 
 $data = [];
 
-while($row = mysqli_fetch_object($rs)){
-    $data[]= $row;
+while ($row = mysqli_fetch_object($rs)) {
+    $data[] = $row;
 }
 
-
 echo mostrar_tabla($data);
-?>
