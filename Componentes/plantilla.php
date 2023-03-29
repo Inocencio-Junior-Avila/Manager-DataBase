@@ -1,13 +1,16 @@
 <?php
 /* 2021-0836 Inocencio Junior Avila Gonzalez */
-class plantilla{
+class plantilla
+{
 
     public static $instancia = null;
-    public static function aplicar(){
+    public static function aplicar()
+    {
         self::$instancia = new plantilla();
     }
 
-    public function __construct(){
+    public function __construct()
+    {
         ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,21 +59,22 @@ class plantilla{
     <div class="container">
         <h3>Gestor de db</h3>
         <hr/>
-        
-        
+
+
         <div style="min-height:400px;">
 
 <?php
-    } 
+}
 
-        function __destruct(){
-            ?>
+    public function __destruct()
+    {
+        ?>
             </div>
             </div>
             <div class="text-center" style="background:white; padding:20px">
-            <center><b> © Derechos Resevados IJAG.inc <?= date("Y"); ?></b></center>
+            <center><b> © Derechos Resevados IJAG.inc <?=date("Y");?></b></center>
             </div>
-        
+
     </body>
     </html>
     <?php
