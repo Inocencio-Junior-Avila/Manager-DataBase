@@ -1,10 +1,9 @@
-## Manager-DataBase
+## Manager-DataBase By: IJAG
 
-##By: IJAG
 
 So far it only handles "MySql" Database =)
 
-##screenshot
+<h1>screenshot</h1>
 
 ![images 1 db](https://user-images.githubusercontent.com/95358159/228677444-4efec129-c9fa-40a7-9b8d-d00dd288188b.png)
 <br>
